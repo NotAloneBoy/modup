@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModUp</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="title" content="ModUp ? Minecraft Mod Updater" />
+    <meta name="description" content="Update your modpacks to other versions. Not affiliated with Mojang or Microsoft." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ModUp ? Minecraft Mod Updater" />
+    <meta property="og:description" content="Update your modpacks to other versions. Not affiliated with Mojang or Microsoft." />
+    <meta property="twitter:title" content="ModUp ? Minecraft Mod Updater" />
+    <meta property="twitter:description" content="Update your modpacks to other versions. Not affiliated with Mojang or Microsoft." />
+</head>
+<body>
+    <img id="logo" src="logo.png">
+
+    <form id="modForm">
+        <label for="modFile">Upload your mods ZIP file:</label><br><br>
+        <input type="file" id="modFile" accept=".zip"><br><br>
+
+        <label for="versionSelector">Select version:</label><br><br>
+        <select id="versionSelector">
+            <option value="">Loading versions...</option>
+        </select> <label for="includeSnapshots">
+            <input type="checkbox" id="includeSnapshots"> Include Snapshots
+        </label><br><br>
+
+        <button type="button" id="updateButton">Update Mods</button>
+        <br><br>
+    </form>
+
+    <div id="progress">
+        <p id="progressText">Updating... (0/3)</p>
+        <div id="progressBarContainer">
+            <div id="progressBar"></div>
+        </div>
+    </div>
+
+    <div id="downloadSection" style="display: none;">
+        <p>Download the updated mods ZIP:</p>
+        <a id="downloadLink" href="" download="updated_mods.zip">Download</a>
+    </div>
+
+    <div id="logViewer">
+        <pre id="logText">Hello World!
+</pre>
+    </div>    
+
+    <p style="font-size: 10px;">Not affiliated with Mojang or Microsoft. | <a href="https://github.com/NotAloneBoy/modup">GitHub</a></p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
